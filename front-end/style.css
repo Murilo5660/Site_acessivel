@@ -124,6 +124,27 @@ img {
     border: 3px solid #003366; /* Moldura para destacar a imagem do fundo */
 }
 
+/* ==========================================================================
+   Estilização do Vídeo Responsivo e Centralizado
+   ========================================================================== */
+.container-video {
+    display: flex;
+    justify-content: center; /* Centraliza o vídeo horizontalmente */
+    align-items: center;
+    margin: 2rem 0;          /* Dá um espaçamento confortável em cima e embaixo */
+    width: 100%;
+}
+
+.container-video iframe {
+    width: 100%;             /* Faz o vídeo ocupar toda a largura disponível */
+    max-width: 560px;        /* Mantém o limite máximo original que você definiu */
+    aspect-ratio: 16 / 9;    /* Mantém a proporção padrão do YouTube sem distorcer */
+    height: auto;            /* Permite que a altura mude proporcionalmente à largura */
+    border-radius: 6px;      /* Combina com o arredondamento das imagens do seu site */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Dá um leve destaque tridimensional */
+}
+
+
 /* Estilização dos Botões de Tamanho do Texto (Dentro do Header) */
 .botoes-acessibilidade button {
     background-color: #0052A3;
