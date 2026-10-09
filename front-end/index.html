@@ -1,11 +1,93 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Acessivel</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Escola Viva - Uma Escola Acessível para Todos</title>
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Site Acessivel</h1>
+
+
+   <!-- Cabeçalho Principal com Links de Navegação Acessíveis -->
+   <header>
+       <h1>Escola Viva</h1>
+       <p>Educação Inclusiva: Uma escola acessível para todos</p>
+       <nav aria-label="Navegação principal">
+           <ul>
+               <li><a href="#sobre">Apresentação da Escola</a></li>
+               <li><a href="#o-que-e">O que é Acessibilidade</a></li>
+               <li><a href="#inclusao">Inclusão e Recursos</a></li>
+           </ul>
+       </nav>
+   </header>
+
+
+   <!-- Conteúdo Principal do Site -->
+   <main>
+
+
+       <!-- Seção 1: Apresentação da Escola -->
+       <section id="sobre" aria-labelledby="titulo-sobre">
+           <h2 id="titulo-sobre">Conheça a Escola Viva</h2>
+           <p>A Escola Viva é uma instituição de ensino comprometida com o desenvolvimento integral de cada estudante. Nosso principal objetivo é eliminar barreiras físicas, pedagógicas e digitais, garantindo que todas as pessoas tenham igualdade de oportunidades no aprendizado.</p>
+          
+           <!-- Imagem 1 com texto alternativo descritivo -->
+           <div class="container-imagem">
+               <img src="imagens/escola.jpg" alt="Fachada de uma escola moderna com rampa de acesso lateral, portas amplas e piso tátil direcional na entrada.">
+           </div>
+       </section>
+
+
+       <!-- Seção 2: O que é Acessibilidade -->
+       <section id="o-que-e" aria-labelledby="titulo-acessibilidade">
+           <h2 id="titulo-acessibilidade">O que é Acessibilidade?</h2>
+           <p>Acessibilidade é o direito que permite à pessoa com deficiência ou mobilidade reduzida viver de forma independente e participar plenamente de todos os aspectos da vida. Na escola, isso significa transformar espaços, tecnologias e atitudes para acolher a pluralidade humana.</p>
+          
+           <!-- Imagem 2 com texto alternativo descritivo -->
+           <div class="container-imagem">
+               <img src="imagens/acessibilidade.jpg" alt="Grupo de alunos diversos, incluindo uma criança em cadeira de rodas e outra com fones de ouvido abafadores, sorrindo juntos em uma sala de aula iluminada.">
+           </div>
+       </section>
+
+
+       <!-- Seção 3: Inclusão e Recursos Específicos -->
+       <section id="inclusao" aria-labelledby="titulo-inclusao">
+           <h2 id="titulo-inclusao">Inclusão na Prática</h2>
+          
+           <article>
+               <h3>Acessibilidade para Pessoas Autistas</h3>
+               <p>Nossa escola oferece salas de regulação sensorial (ambientes calmos para momentos de sobrecarga), rotinas visuais estruturadas e previsibilidade nas atividades cotidianas. Também permitimos e incentivamos o uso de abafadores de ruído em ambientes barulhentos para estudantes com hipersensibilidade auditiva.</p>
+           </article>
+
+
+           <article>
+               <h3>Acessibilidade para Pessoas Surdas</h3>
+               <p>Garantimos a presença de tradutores e intérpretes da Língua Brasileira de Sinais (Libras) em todas as aulas e eventos. Além disso, disponibilizamos materiais didáticos visuais, sinalização em Libras por toda a escola e incentivamos o aprendizado da língua por toda a comunidade escolar.</p>
+           </article>
+
+
+           <article>
+               <h3>4 Recursos de Acessibilidade do Nosso Espaço</h3>
+               <p>Para construir um ambiente verdadeiramente inclusivo, nossa estrutura física e digital conta com os seguintes pilares:</p>
+               <ul class="lista-recursos">
+                   <li><strong>Rampas e Elevadores:</strong> Garantia de livre circulação espacial para cadeirantes ou pessoas com mobilidade reduzida.</li>
+                   <li><strong>Piso Tátil e Sinalização em Braille:</strong> Orientação segura e autônoma nas dependências da escola para pessoas cegas ou com baixa visão.</li>
+                   <li><strong>Design Web Inclusivo:</strong> Textos com alto contraste, fontes legíveis e código preparado para leitores de tela usados por pessoas com deficiência visual.</li>
+                   <li><strong>Tecnologia Assistiva:</strong> Computadores equipados com softwares de leitura de tela, teclados adaptados e acionadores para alunos com limitações motoras.</li>
+               </ul>
+           </article>
+       </section>
+
+
+   </main>
+
+
+   <!-- Rodapé Informativo -->
+   <footer>
+       <p>&copy; 2026 Escola Viva. Desenvolvido por Murilo Ferreira Stresser e Caio Lima Viana</p>
+   </footer>
+
+
 </body>
 </html>
