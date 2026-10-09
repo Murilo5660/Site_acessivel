@@ -1,3 +1,137 @@
-body{
-    background-color: black;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Fonte limpa e sem serifa */
+    line-height: 1.6;
+    background-color: #F4F6F9; /* Fundo cinza bem claro */
+    color: #1A1A1A;            /* Texto quase preto para máximo contraste */
+    padding: 0;
+}
+
+/* ==========================================================================
+   Cabeçalho (Header)
+   ========================================================================== */
+header {
+    background-color: #003366; /* Azul escuro - Transmite seriedade e dá ótimo contraste */
+    color: #FFFFFF;            /* Texto branco puro */
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #E6F0FA; /* Azul muito claro para contraste suave na leitura */
+}
+
+/* Navegação por lista (Menu) */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* Garante que quebre linha em telas menores */
+}
+
+/* Links do Menu com identificação clara */
+nav a {
+    color: #FFFFFF;
+    background-color: #0052A3; /* Botão azul médio destacado */
+    padding: 0.7rem 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 2px solid #FFFFFF; /* Borda branca reforça a visibilidade */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+/* Desafio Extra: Efeito :hover nos botões */
+nav a:hover, nav a:focus {
+    background-color: #E6F0FA;
+    color: #003366;
+    text-decoration: underline; /* Reforço visual além da cor */
+}
+
+/* ==========================================================================
+   Conteúdo Principal (Main e Seções)
+   ========================================================================== */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    background-color: #FFFFFF; /* Fundo branco para as seções */
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra leve para separar elementos */
+}
+
+h2 {
+    color: #003366;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #003366; /* Linha de marcação visual */
+    padding-bottom: 0.3rem;
+}
+
+h3 {
+    color: #0052A3;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Listas de recursos estilizadas */
+.lista-recursos {
+    list-style-type: square;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.lista-recursos li {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Estilização das Imagens */
+.container-imagem {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 3px solid #003366; /* Moldura para destacar a imagem do fundo */
+}
+
+/* ==========================================================================
+   Rodapé (Footer)
+   ========================================================================== */
+footer {
+    background-color: #1A1A1A; /* Fundo quase preto */
+    color: #FFFFFF;            /* Texto branco */
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    font-size: 0.95rem;
 }
