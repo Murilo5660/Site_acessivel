@@ -124,6 +124,29 @@ img {
     border: 3px solid #003366; /* Moldura para destacar a imagem do fundo */
 }
 
+/* Estilização dos Botões de Tamanho do Texto (Dentro do Header) */
+.botoes-acessibilidade button {
+    background-color: #0052A3;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 0.25rem;
+    transition: background-color 0.3s ease;
+}
+
+/* REQUISITO EXTRA: Efeito :hover e :focus nos botões de texto */
+.botoes-acessibilidade button:hover, 
+.botoes-acessibilidade button:focus {
+    background-color: #E6F0FA;
+    color: #003366;
+    text-decoration: underline;
+}
+
+
 /* ==========================================================================
    Rodapé (Footer)
    ========================================================================== */
@@ -134,4 +157,67 @@ footer {
     padding: 1.5rem;
     margin-top: 3rem;
     font-size: 0.95rem;
+}
+/* Estilização do Formulário Acessível */
+.formulario-acessivel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 100%;
+    margin-top: 1.5rem;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.campo-formulario label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1A1A1A;
+}
+
+/* Inputs respeitando o contraste do seu design */
+.campo-formulario input, 
+.campo-formulario textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #003366; /* Borda usando seu azul escuro principal */
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1A1A1A;
+    background-color: #FFFFFF;
+}
+
+/* Realce visual quando o usuário clica no input */
+.campo-formulario input:focus, 
+.campo-formulario textarea:focus {
+    outline: 3px solid #0052A3;
+    border-color: #0052A3;
+}
+
+/* Botão de Enviar Alinhado aos seus Botões de Navegação */
+.btn-enviar {
+    background-color: #0052A3;
+    color: #FFFFFF;
+    border: 2px solid #003366;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start; /* Alinha o botão à esquerda */
+    transition: background-color 0.3s ease;
+}
+
+/* REQUISITO EXTRA: Efeito :hover e :focus no botão de envio */
+.btn-enviar:hover, 
+.btn-enviar:focus {
+    background-color: #003366; /* Inverte a cor para o azul escuro */
+    color: #FFFFFF;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
