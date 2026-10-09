@@ -8,24 +8,38 @@
 </head>
 <body>
 
+   <!-- ACESSIBILIDADE: Widget do VLibras (Seção com informações em Libras) -->
+   <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
 
    <!-- Cabeçalho Principal com Links de Navegação Acessíveis -->
    <header>
-       <h1>Escola Viva</h1>
+       <div class="topo-header">
+           <h1>Escola Viva</h1>
+           <!-- REQUISITO: Botões para aumentar/diminuir o tamanho do texto -->
+           <div class="botoes-acessibilidade">
+               <button id="btn-aumentar" aria-label="Aumentar tamanho do texto">A+ Aumentar</button>
+               <button id="btn-diminuir" aria-label="Diminuir tamanho do texto">A- Diminuir</button>
+           </div>
+       </div>
        <p>Educação Inclusiva: Uma escola acessível para todos</p>
        <nav aria-label="Navegação principal">
            <ul>
                <li><a href="#sobre">Apresentação da Escola</a></li>
                <li><a href="#o-que-e">O que é Acessibilidade</a></li>
                <li><a href="#inclusao">Inclusão e Recursos</a></li>
+               <li><a href="#video-secao">Vídeo Institucional</a></li>
+               <li><a href="#contato">Contato</a></li>
            </ul>
        </nav>
    </header>
 
-
    <!-- Conteúdo Principal do Site -->
    <main>
-
 
        <!-- Seção 1: Apresentação da Escola -->
        <section id="sobre" aria-labelledby="titulo-sobre">
@@ -38,15 +52,6 @@
            </div>
        </section>
 
-       <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
-            </div>
-        </div>
-
-
-
        <!-- Seção 2: O que é Acessibilidade -->
        <section id="o-que-e" aria-labelledby="titulo-acessibilidade">
            <h2 id="titulo-acessibilidade">O que é Acessibilidade?</h2>
@@ -58,7 +63,6 @@
            </div>
        </section>
 
-
        <!-- Seção 3: Inclusão e Recursos Específicos -->
        <section id="inclusao" aria-labelledby="titulo-inclusao">
            <h2 id="titulo-inclusao">Inclusão na Prática</h2>
@@ -68,12 +72,10 @@
                <p>Nossa escola oferece salas de regulação sensorial (ambientes calmos para momentos de sobrecarga), rotinas visuais estruturadas e previsibilidade nas atividades cotidianas. Também permitimos e incentivamos o uso de abafadores de ruído em ambientes barulhentos para estudantes com hipersensibilidade auditiva.</p>
            </article>
 
-
            <article>
                <h3>Acessibilidade para Pessoas Surdas</h3>
                <p>Garantimos a presença de tradutores e intérpretes da Língua Brasileira de Sinais (Libras) em todas as aulas e eventos. Além disso, disponibilizamos materiais didáticos visuais, sinalização em Libras por toda a escola e incentivamos o aprendizado da língua por toda a comunidade escolar.</p>
            </article>
-
 
            <article>
                <h3>4 Recursos de Acessibilidade do Nosso Espaço</h3>
@@ -87,20 +89,55 @@
            </article>
        </section>
 
+       <!-- REQUISITO: Um vídeo com legenda -->
+       <section id="video-secao" aria-labelledby="titulo-video">
+           <h2 id="titulo-video">Vídeo Informativo Conheça Nosso Espaço</h2>
+           <p>Assista ao nosso vídeo institucional com suporte a legendas em português.</p>
+           <div class="container-video">
+               <video controls width="100%">
+                   <source src="video/escola-viva.mp4" type="video/mp4">
+                   <track src="video/legendas.vtt" kind="subtitles" srclang="pt" label="Português" default>
+                   Seu navegador não suporta a tag de vídeo.
+               </video>
+           </div>
+       </section>
+
+       <!-- REQUISITO: Um formulário acessível -->
+       <section id="contato" aria-labelledby="titulo-contato">
+           <h2 id="titulo-contato">Fale Conosco</h2>
+           <p>Utilize o formulário abaixo para enviar suas dúvidas ou agendar uma visita guiada.</p>
+           <form action="#" method="POST" class="formulario-acessivel">
+               <div class="campo-formulario">
+                   <label for="nome">Nome Completo (obrigatório):</label>
+                   <input type="text" id="nome" name="nome" required placeholder="Ex: Murilo Ferreira" aria-required="true">
+               </div>
+
+               <div class="campo-formulario">
+                   <label for="email">E-mail de Contato (obrigatório):</label>
+                   <input type="email" id="email" name="email" required placeholder="nome@exemplo.com" aria-required="true">
+               </div>
+
+               <div class="campo-formulario">
+                   <label for="mensagem">Sua Mensagem:</label>
+                   <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva aqui como podemos ajudar você..."></textarea>
+               </div>
+
+               <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+           </form>
+       </section>
 
    </main>
-
 
    <!-- Rodapé Informativo -->
    <footer>
        <p>&copy; 2026 Escola Viva. Desenvolvido por Murilo Ferreira Stresser e Caio Lima Viana</p>
    </footer>
 
+    <!-- Scripts Oficiais -->
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-
-
+    <script src="script.js"></script>
 </body>
 </html>
