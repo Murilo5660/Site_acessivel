@@ -109,28 +109,56 @@
 
 
        <!-- REQUISITO: Um formulário acessível -->
-       <section id="contato" aria-labelledby="titulo-contato">
-           <h2 id="titulo-contato">Fale Conosco</h2>
-           <p>Utilize o formulário abaixo para enviar suas dúvidas ou agendar uma visita guiada.</p>
-           <form action="#" method="POST" class="formulario-acessivel">
-               <div class="campo-formulario">
-                   <label for="nome">Nome Completo (obrigatório):</label>
-                   <input type="text" id="nome" name="nome" required placeholder="Ex: Murilo Ferreira" aria-required="true">
-               </div>
+       
+    <section id="contato" aria-labelledby="titulo-contato">
+        <h2 id="titulo-contato">Fale Conosco</h2>
 
-               <div class="campo-formulario">
-                   <label for="email">E-mail de Contato (obrigatório):</label>
-                   <input type="email" id="email" name="email" required placeholder="nome@exemplo.com" aria-required="true">
-               </div>
+        <p id="instrucoes-formulario">
+            Preencha os campos abaixo. Nome e e-mail são obrigatórios.
+            A mensagem é opcional.
+        </p>
 
-               <div class="campo-formulario">
-                   <label for="mensagem">Sua Mensagem:</label>
-                   <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva aqui como podemos ajudar você..."></textarea>
-               </div>
+        <form action="#" method="POST"
+            class="formulario-acessivel"
+            aria-describedby="instrucoes-formulario">
 
-               <button type="submit" class="btn-enviar">Enviar Mensagem</button>
-           </form>
-       </section>
+            <div class="campo-formulario">
+                <label for="nome">Nome completo (obrigatório):</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Ex. : Murilo Ferreira"
+                    autocomplete="name"
+                    required>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="email">E-mail (obrigatório):</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Ex. : murilo.ferreira@example.com"
+                    autocomplete="email"
+                    required>
+            </div>
+
+            <div class="campo-formulario">
+                <label for="mensagem">Mensagem (opcional):</label>
+                <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    placeholder="Ex. : escreva aqui como podemos ajudá-lo(a)..."
+                    rows="5"></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">
+                Enviar mensagem
+            </button>
+        </form>
+    </section>
+
 
    </main>
 
