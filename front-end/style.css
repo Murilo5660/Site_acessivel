@@ -32,6 +32,7 @@ header p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     color: #E6F0FA; /* Azul muito claro para contraste suave na leitura */
+    text-align: center;
 }
 
 /* Navegação por lista (Menu) */
@@ -180,6 +181,11 @@ footer {
     margin-top: 3rem;
     font-size: 0.95rem;
 }
+
+footer p {
+    text-align: center;
+}
+
 /* Estilização do Formulário Acessível */
 .formulario-acessivel {
     display: flex;
